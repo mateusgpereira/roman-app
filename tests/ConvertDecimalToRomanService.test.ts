@@ -15,13 +15,13 @@ describe('ConvertDecimalToRoman', () => {
     expect(roman).toEqual('MMDCCCXLI')
   })
 
-  test('should not convert a number less than 0', async () => {
+  test('should not convert a number less than 0', () => {
     expect(() => {
       service.execute(-2)
     }).toThrow(Error)
   })
 
-  test('should not convert a number greater than 3000', async () => {
+  test('should not convert a number greater than 3000', () => {
     expect(() => {
       service.execute(3001)
     }).toThrow(Error)

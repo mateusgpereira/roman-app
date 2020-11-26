@@ -24,6 +24,7 @@
     ],
     "rules": {
       "semi": ["error", "never"],
+      "class-methods-use-this": "off",
       "import/extensions": [
         "error",
         "ignorePackages",
