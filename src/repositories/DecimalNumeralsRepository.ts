@@ -18,13 +18,6 @@ class DecimalNumeralsRepository {
   public getAllNumerals(): Array<number> {
     return this.decimalNumerals
   }
-
-  public findByIndex(index: number): number {
-    if (index >= this.decimalNumerals.length) {
-      throw new Error('Invalid index')
-    }
-    return this.decimalNumerals[index]
-  }
 }
 
 export default DecimalNumeralsRepository

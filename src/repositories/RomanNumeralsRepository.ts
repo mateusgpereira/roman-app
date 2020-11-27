@@ -18,13 +18,6 @@ class RomanNumeralsRepository {
   public getAllNumerals(): Array<string> {
     return this.romanNumerals
   }
-
-  public findByIndex(index: number): string {
-    if (index >= this.romanNumerals.length) {
-      throw new Error('Invalid index')
-    }
-    return this.romanNumerals[index]
-  }
 }
 
 export default RomanNumeralsRepository
