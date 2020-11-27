@@ -100,15 +100,16 @@ requires: "decimalInput": 65 (int value)
 - POST /decimals
 requires: "romanInput": "L" (string value)
 
-The app runs by default on the port 3000, so the complete URL
-should be: http://localhost:3000/romans
+The app runs by default on the port 3000, so the complete URL  
+should be: http://localhost:3000/romans  
 or http://localhost:3000/decimals
 
 <br>
 
 ## The Solution
 
-The challenge was solved by using two arrays, one containing all the roman numerals, the other one with the decimals numerals equivalents to the romans.
+The challenge was solved by using two arrays, one containing all the roman numerals,  
+the other one with the decimals numerals equivalents to the romans.
 
 To make the **decimal to roman** conversion:
 
@@ -125,4 +126,5 @@ Then I iterate over this array, checking if the current roman is bigger or equal
 roman, so it will be added to the decimal result. If it isn't, then it will be keeped in a prevRoman
 variable to be used combined to the next roman numeral, in the next loop round.
 
-*(I actually compared if the current array index was less then or equals because I organized the array from the bigger to the smaller value, but the logic behind the scenes was the one above)*
+*(I actually compared if the current array index was less then or equals because I organized the array  
+from the bigger to the smaller value, but the logic behind the scenes was the one above)*
