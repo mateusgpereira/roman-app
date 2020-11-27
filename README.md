@@ -49,7 +49,7 @@ chmod +x reqinstall.sh && ./reqinstall.sh
 ```
 It will ask you for the root password.
 
-After installed the system requirements, you must install the apps dependencies by running:
+After installed the system requirements, and reload your terminal, you must install the apps dependencies by running:
 
 ```bash
 yarn
@@ -78,11 +78,39 @@ yarn test
 
 <br>
 
+## Usage
+
+In the project root folder there are 2 files with the requests
+that can be sent to the api:
+
+```bash
+insomnia_requests.json
+postman_requests.json
+```
+
+One to be imported and used in the Insomnia, and the other for Postman.
+
+Or you can send the requests in another way if you want.
+
+The available endpoints are:
+
+- POST /romans
+requires: "decimalInput": 65 (int value)
+
+- POST /decimals
+requires: "romanInput": "L" (string value)
+
+The app runs by default on the port 3000, so the complete URL
+should be: http://localhost:3000/romans
+or http://localhost:3000/decimals
+
+<br>
+
 ## The Solution
 
 The challenge was solved by using two arrays, one containing all the roman numerals, the other one with the decimals numerals equivalents to the romans.
 
-To make the **decimal to roman** convertion:
+To make the **decimal to roman** conversion:
 
 I used a for loop to pass throug the romans entire array, from the greater to the minor,
 checking if the current decimalIterator was bigger than the decimal equivalent to the current roman.
@@ -90,7 +118,7 @@ Then I decrement the decimal value from the decimalIterator and sum the roman to
 that would form the roman numeral to return.
 
 
-For the **roman to decimal** convertion:
+For the **roman to decimal** conversion:
 
 I split the roman numeral to get an array with each character that compose the roman numeral.
 Then I iterate over this array, checking if the current roman is bigger or equals to the next
